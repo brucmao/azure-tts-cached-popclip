@@ -1,0 +1,39 @@
+name: Azure TTS Cached
+identifier: local.azure-tts-cached
+options:
+  - identifier: region
+    label: Azure Region
+    type: string
+    defaultValue: eastus
+  - identifier: key
+    label: Azure Subscription Key
+    type: secret
+  - identifier: format
+    label: Audio Output
+    type: string
+    defaultValue: audio-16khz-32kbitrate-mono-mp3
+  - identifier: lang
+    label: Locale
+    type: string
+    defaultValue: en-US
+  - identifier: voice
+    label: Voice
+    type: string
+    defaultValue: en-US-JennyMultilingualNeural
+actions:
+  - identifier: normal
+    title: Azure TTS 1.0x
+    icon: symbol:waveform
+    stayVisible: true
+    shellScriptFile: azure.sh
+  - identifier: toggle
+    title: Azure TTS Pause / Resume
+    icon: symbol:playpause.fill
+    wantsPrimaryDisplay: true
+    stayVisible: true
+    shellScriptFile: azure.sh
+  - identifier: slow
+    title: Azure TTS 0.8x
+    icon: symbol:tortoise.fill
+    stayVisible: true
+    shellScriptFile: azure.sh
